@@ -1,4 +1,4 @@
-package com.liftoffapp.liftoff
+package com.liftoffapp.liftoff.debug
 
 import io.flutter.embedding.android.FlutterActivity
 

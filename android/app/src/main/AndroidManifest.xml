@@ -1,6 +1,6 @@
 <manifest
   xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.liftoffapp.liftoff">
+  package="com.liftoffapp.liftoff.debug">
 
   <uses-permission android:name="android.permission.INTERNET" />
   <!-- Needed for url_launcher to work on android 11 -->
@@ -8,7 +8,7 @@
 
   <application
     android:name="${applicationName}"
-        android:label="Liftoff"
+        android:label="Liftoff Debug"
     android:icon="@mipmap/ic_launcher">
 
     <activity
