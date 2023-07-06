@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../util/observer_consumers.dart';
 import '../markdown_text.dart';
+import '../scoll_chainer.dart';
 import 'post_status.dart';
 import 'post_store.dart';
 
@@ -74,10 +75,13 @@ class PostBody extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(maxHeight: 400),
-                  child: SingleChildScrollView(
-                    child: MarkdownText(
-                      body,
-                      instanceHost: store.postView.instanceHost,
+                  child: ScrollChainer(
+                    axis: Axis.vertical,
+                    child: SingleChildScrollView(
+                      child: MarkdownText(
+                        body,
+                        instanceHost: store.postView.instanceHost,
+                      ),
                     ),
                   ),
                 ),
